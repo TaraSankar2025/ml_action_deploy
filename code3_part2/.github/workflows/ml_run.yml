@@ -1,0 +1,45 @@
+name: ML Run
+# on mentions a trigger for the workflow
+on: 
+    push: # when a push is made to the main branch of the repository
+jobs:
+<<<<<<< HEAD
+  ml_run:
+    runs-on: ubuntu-latest # runs the workflow on the latest ubuntu version
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4 # uses the checkout action to checkout the code
+
+
+      - name: Set up Python
+        uses: actions/setup-python@v5 # uses the setup-python action to set up the python environment
+        with:
+          python-version: '3.13'
+touch 
+
+      - name: Install dependencies
+        run:          
+          pip install scikit-learn numpy
+
+
+
+=======
+    ml_runs:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.13'
+            - name: Insatll dependencies
+              run:                
+                pip install scikit-learn numpy
+                
+>>>>>>> 34c53708118557363d754bc22881e4d965d86a82
+
+
+
+
+        
